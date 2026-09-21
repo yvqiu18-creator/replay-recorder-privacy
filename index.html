@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#03142d">
+  <meta name="description" content="Privacy Policy for replay recoder (回录), developed by yvhou.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Privacy Policy | replay recoder</title>
+  <style>
+    :root {
+      --bg: #020b19;
+      --surface: #061a35;
+      --surface-2: #0a2344;
+      --line: rgba(148, 184, 230, 0.2);
+      --text: #f4f8ff;
+      --muted: #aabbd2;
+      --accent: #ff2a34;
+      --link: #77b7ff;
+      --max: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(34, 97, 168, 0.22), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.72 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--link); }
+    a:hover { color: #acd5ff; }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(2, 11, 25, 0.9);
+    }
+
+    .header-inner,
+    main,
+    footer {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: 0.01em;
+    }
+
+    .mark {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      border: 4px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    .mark::before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .mark::after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      border: 7px solid transparent;
+      border-right-color: var(--accent);
+      transform: rotate(42deg);
+    }
+
+    nav { display: flex; gap: 16px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+
+    main { padding: 72px 0 56px; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #8fc2ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 8vw, 64px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin: 40px 0 56px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--line);
+    }
+
+    .meta div { padding: 18px; background: var(--surface); }
+    .meta dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .meta dd { margin: 5px 0 0; font-weight: 650; overflow-wrap: anywhere; }
+
+    .notice {
+      margin: 0 0 56px;
+      padding: 22px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 14px 14px 0;
+      background: var(--surface-2);
+    }
+
+    .notice strong { display: block; margin-bottom: 4px; }
+    .notice p { margin: 0; color: var(--muted); }
+
+    section { scroll-margin-top: 24px; }
+    section + section { margin-top: 52px; }
+
+    h2 {
+      margin: 0 0 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 25px;
+      letter-spacing: -0.02em;
+    }
+
+    h3 { margin: 30px 0 10px; font-size: 18px; }
+    p { margin: 0 0 14px; }
+    ul { margin: 12px 0 18px; padding-left: 22px; }
+    li + li { margin-top: 10px; }
+    .muted { color: var(--muted); }
+    .language-divider { margin: 72px 0; border: 0; border-top: 1px solid var(--line); }
+
+    footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner, main, footer { width: min(calc(100% - 28px), var(--max)); }
+      .header-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 14px 0; }
+      nav { width: 100%; justify-content: space-between; }
+      main { padding-top: 48px; }
+      .meta { grid-template-columns: 1fr; }
+      .intro { font-size: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand"><span class="mark" aria-hidden="true"></span><span>replay recoder · 回录</span></div>
+      <nav aria-label="Language navigation">
+        <a href="#english">English</a>
+        <a href="#chinese" lang="zh-CN">中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="eyebrow">Privacy &amp; data</p>
+    <h1>Privacy Policy</h1>
+    <p class="intro">replay recoder is designed as a local-first screen recording utility. Your recordings stay on your device unless you choose to share them.</p>
+
+    <dl class="meta">
+      <div><dt>App</dt><dd>replay recoder (回录)</dd></div>
+      <div><dt>Developer</dt><dd>yvhou</dd></div>
+      <div><dt>Effective date</dt><dd>September 21, 2026</dd></div>
+    </dl>
+
+    <aside class="notice" aria-label="Privacy summary">
+      <strong>Privacy at a glance</strong>
+      <p>No developer account, no advertising SDK, no analytics SDK, and no developer-operated server for uploading recordings.</p>
+    </aside>
+
+    <section id="english" aria-labelledby="english-title">
+      <h2 id="english-title">English</h2>
+
+      <h3>1. Scope</h3>
+      <p>This Privacy Policy explains how replay recoder (the “App”), developed by yvhou, accesses, uses, stores, and shares information when you use the App.</p>
+
+      <h3>2. Information the App accesses and why</h3>
+      <ul>
+        <li><strong>Screen content:</strong> The App accesses the screen only after you approve Android’s system screen-capture prompt. This access is used to create standard recordings and user-requested replay clips.</li>
+        <li><strong>Audio:</strong> Depending on the recording options you select and device support, the App may access device playback audio and/or microphone audio. Microphone access requires Android permission and is used only when the microphone option is enabled.</li>
+        <li><strong>Notifications and overlay controls:</strong> Android requires a foreground-service notification while recording. If you enable floating controls, the App uses the “display over other apps” permission to show recording controls.</li>
+        <li><strong>App settings and access status:</strong> Language, recording preferences, trial status, and Pro entitlement status are stored locally so the App can remember your choices and enable the correct features.</li>
+        <li><strong>Limited diagnostic information:</strong> The App may keep a bounded local log of technical events such as device/runtime information, recording configuration, timestamps, and error status. It is designed not to include recorded screen content, audio content, media content, user input, or sensitive file paths.</li>
+      </ul>
+
+      <h3>3. Collection, transmission, and sharing</h3>
+      <p>The App does not upload recordings or diagnostic logs to servers operated by the developer. The App does not contain advertising, analytics, or cross-app tracking SDKs, and it does not require a developer account.</p>
+      <p>Information leaves your device only when you take an explicit action, such as sharing a recording or exporting a diagnostic report and selecting a destination. The selected app or service processes that shared copy under its own privacy policy.</p>
+      <p>If you purchase Pro through Google Play, Google processes the transaction under Google’s policies. The App receives purchase and entitlement information needed to unlock Pro features; the developer does not receive your full payment-card details.</p>
+
+      <h3>4. Storage, retention, and deletion</h3>
+      <ul>
+        <li>Recordings are saved to your device’s media library, normally under <strong>Movies/ReplayRecorder</strong>, and remain there until you delete them.</li>
+        <li>Settings, trial/entitlement status, and local diagnostics remain in the App’s private storage until they are replaced, cleared through Android settings, or removed by uninstalling the App. Diagnostic storage is bounded, so older events may be overwritten.</li>
+        <li>The developer does not operate a cloud backup service for App data. Copies you export or share are controlled by you and the destination you choose.</li>
+      </ul>
+
+      <h3>5. Security</h3>
+      <p>The App uses Android’s permission system, system screen-capture consent, app-private storage, and local processing to reduce unnecessary data exposure. No method of storage is completely secure, so you should protect access to your device and review recordings before sharing them.</p>
+
+      <h3>6. Children</h3>
+      <p>The App is a general-purpose utility and is not designed specifically for children. It does not knowingly collect personal information through a developer-operated service.</p>
+
+      <h3>7. Third-party services</h3>
+      <p>The App relies on Android and may use Google Play services for distribution and purchases. Those services are governed by their providers’ privacy policies. Apps or services you select when sharing content are also independent third parties.</p>
+
+      <h3>8. Changes to this policy</h3>
+      <p>This policy may be updated when App features, legal requirements, or data practices change. The current version will be published at this URL with a revised effective date.</p>
+
+      <h3>9. Contact</h3>
+      <p>For privacy questions or requests, contact the developer at <a href="mailto:yvqiu18@gmail.com">yvqiu18@gmail.com</a>.</p>
+    </section>
+
+    <hr class="language-divider">
+
+    <section id="chinese" lang="zh-CN" aria-labelledby="chinese-title">
+      <h2 id="chinese-title">隐私权政策</h2>
+      <p class="muted">回录是一款以本地处理为主的屏幕录制工具。除非你主动分享，否则录制内容会保留在你的设备上。</p>
+
+      <h3>1. 适用范围</h3>
+      <p>本隐私权政策说明由 yvhou 开发的 replay recoder（中文名“回录”，以下简称“本应用”）在你使用期间如何访问、使用、存储和分享信息。</p>
+
+      <h3>2. 本应用访问的信息及用途</h3>
+      <ul>
+        <li><strong>屏幕内容：</strong>只有在你确认 Android 系统的屏幕捕获授权提示后，本应用才会访问屏幕内容，用于创建普通录屏和由你主动触发的回溯片段。</li>
+        <li><strong>音频：</strong>根据你选择的录制选项和设备支持情况，本应用可能访问设备播放音频和/或麦克风音频。使用麦克风需要获得 Android 权限，并且仅在启用麦克风选项时使用。</li>
+        <li><strong>通知和悬浮控制：</strong>Android 要求录制期间显示前台服务通知。如果你启用悬浮控制，本应用会使用“显示在其他应用上层”权限来显示录制控制栏。</li>
+        <li><strong>应用设置和使用资格状态：</strong>语言、录制偏好、试用状态和专业版权益状态保存在本地，以便记住你的选择并启用正确功能。</li>
+        <li><strong>有限的诊断信息：</strong>本应用可能在本地保存有数量上限的技术事件，例如设备和运行环境信息、录制配置、时间戳和错误状态。诊断信息的设计不包含录制的屏幕、音频、媒体内容、用户输入或敏感文件路径。</li>
+      </ul>
+
+      <h3>3. 收集、传输和分享</h3>
+      <p>本应用不会将录制内容或诊断日志上传到开发者运营的服务器。本应用不包含广告、分析或跨应用跟踪 SDK，也不要求注册开发者账户。</p>
+      <p>只有当你主动执行操作（例如分享录制内容，或导出诊断报告并选择接收位置）时，相关信息才会离开设备。你所选择的应用或服务会按照其自身隐私政策处理该副本。</p>
+      <p>如果你通过 Google Play 购买专业版，交易由 Google 按照其政策处理。本应用只会接收解锁专业版功能所需的购买和权益状态；开发者不会获得你的完整银行卡资料。</p>
+
+      <h3>4. 存储、保留和删除</h3>
+      <ul>
+        <li>录制内容保存在设备的媒体库中，通常位于 <strong>Movies/ReplayRecorder</strong>，直到你将其删除。</li>
+        <li>设置、试用/权益状态和本地诊断信息保存在应用私有存储中，直到被新内容替换、你通过 Android 设置清除应用数据，或卸载本应用。诊断存储有数量上限，因此较旧事件可能被覆盖。</li>
+        <li>开发者不为应用数据运营云备份服务。由你导出或分享的副本由你和所选择的接收位置控制。</li>
+      </ul>
+
+      <h3>5. 安全措施</h3>
+      <p>本应用使用 Android 权限系统、系统屏幕捕获授权、应用私有存储和本地处理，以减少不必要的数据暴露。任何存储方式都无法保证绝对安全，因此请保护好设备，并在分享前检查录制内容。</p>
+
+      <h3>6. 儿童隐私</h3>
+      <p>本应用是通用工具，并非专为儿童设计。本应用不会通过开发者运营的服务有意收集儿童的个人信息。</p>
+
+      <h3>7. 第三方服务</h3>
+      <p>本应用依赖 Android，并可能使用 Google Play 服务进行分发和处理购买。这些服务受其提供商的隐私政策约束。你在分享内容时选择的应用或服务也属于独立第三方。</p>
+
+      <h3>8. 政策变更</h3>
+      <p>当应用功能、法律要求或数据处理方式发生变化时，本政策可能会更新。最新版本会发布在本网址，并注明新的生效日期。</p>
+
+      <h3>9. 联系方式</h3>
+      <p>如有隐私相关问题或请求，请发送邮件至 <a href="mailto:yvqiu18@gmail.com">yvqiu18@gmail.com</a> 联系开发者。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 yvhou · replay recoder / 回录</p>
+  </footer>
+</body>
+</html>
