@@ -199,17 +199,17 @@
   <main>
     <p class="eyebrow">Privacy &amp; data</p>
     <h1>Privacy Policy</h1>
-    <p class="intro">replay recoder is designed as a local-first screen recording utility. Your recordings stay on your device unless you choose to share them.</p>
+    <p class="intro">replay recoder processes screen recordings on your device. Google Play handles Pro purchases, restoration, and billing-service diagnostics.</p>
 
     <dl class="meta">
       <div><dt>App</dt><dd>replay recoder (回录)</dd></div>
       <div><dt>Developer</dt><dd>yvhou</dd></div>
-      <div><dt>Effective date</dt><dd>September 21, 2026</dd></div>
+      <div><dt>Effective date</dt><dd>October 14, 2026</dd></div>
     </dl>
 
     <aside class="notice" aria-label="Privacy summary">
       <strong>Privacy at a glance</strong>
-      <p>No developer account, no advertising SDK, no analytics SDK, and no developer-operated server for uploading recordings.</p>
+      <p>No app-account registration, advertising, or developer-operated recording-upload service. Screen and audio processing stays on your device; Google Play Billing can communicate with Google.</p>
     </aside>
 
     <section id="english" aria-labelledby="english-title">
@@ -221,22 +221,27 @@
       <h3>2. Information the App accesses and why</h3>
       <ul>
         <li><strong>Screen content:</strong> The App accesses the screen only after you approve Android’s system screen-capture prompt. This access is used to create standard recordings and user-requested replay clips.</li>
-        <li><strong>Audio:</strong> Depending on the recording options you select and device support, the App may access device playback audio and/or microphone audio. Microphone access requires Android permission and is used only when the microphone option is enabled.</li>
+        <li><strong>Audio:</strong> Depending on your recording options and device support, the App may access playback audio, microphone audio, or both while capturing. Android audio permission is requested when needed; microphone audio is captured only in microphone or mixed-audio mode.</li>
         <li><strong>Notifications and overlay controls:</strong> Android requires a foreground-service notification while recording. If you enable floating controls, the App uses the “display over other apps” permission to show recording controls.</li>
         <li><strong>App settings and access status:</strong> Language, recording preferences, trial status, and Pro entitlement status are stored locally so the App can remember your choices and enable the correct features.</li>
-        <li><strong>Limited diagnostic information:</strong> The App may keep a bounded local log of technical events such as device/runtime information, recording configuration, timestamps, and error status. It is designed not to include recorded screen content, audio content, media content, user input, or sensitive file paths.</li>
+        <li><strong>Local recording diagnostics:</strong> The App keeps a bounded local log of technical events such as recording configuration, thermal/memory/storage status, timestamps, and errors. These reports do not include recorded screen content, audio, typed content, payment details, or purchase tokens. They are not automatically uploaded by the App's recording code.</li>
+        <li><strong>Google Play purchase information:</strong> To unlock or restore Pro, the App handles the purchased product, purchase state, purchase token, and signature supplied by Google Play. Tokens are used to confirm purchases with Google Play. The App stores the resulting Pro status and its source locally; it does not maintain a developer-operated purchase-verification server.</li>
       </ul>
 
       <h3>3. Collection, transmission, and sharing</h3>
-      <p>The App does not upload recordings or diagnostic logs to servers operated by the developer. The App does not contain advertising, analytics, or cross-app tracking SDKs, and it does not require a developer account.</p>
-      <p>Information leaves your device only when you take an explicit action, such as sharing a recording or exporting a diagnostic report and selecting a destination. The selected app or service processes that shared copy under its own privacy policy.</p>
-      <p>If you purchase Pro through Google Play, Google processes the transaction under Google’s policies. The App receives purchase and entitlement information needed to unlock Pro features; the developer does not receive your full payment-card details.</p>
+      <p>The App does not upload recordings or local recording diagnostics to a developer-operated server. It has no advertising or cross-app tracking functionality, no developer-operated analytics backend, and no app-account registration.</p>
+      <p>You can manage and share recordings through your device's gallery. You can also explicitly export a local diagnostic report and choose its recipient through Android's sharing interface. The destination app or service handles its copy under its own privacy policy. Gallery/cloud synchronization or backups that you enable independently are controlled by those services, not by this App.</p>
+      <p>When you open settings, return to the settings screen, restore purchases, or start a purchase, Google Play Billing can communicate with Google to retrieve prices, query ownership, and confirm purchases. This can occur even if you do not buy Pro. Google collects payment information directly under its terms; the App does not receive your full card number or other payment credentials.</p>
+      <p>The included Google Play Billing library also has its own diagnostic logging and transmission. It can send billing API results, connection/error information, billing-client session information, and technical device/app/network environment information to Google to operate and improve the billing service. This is separate from the App's local recording diagnostics and does not upload your recordings. Google's processing is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
       <h3>4. Storage, retention, and deletion</h3>
       <ul>
         <li>Recordings are saved to your device’s media library, normally under <strong>Movies/ReplayRecorder</strong>, and remain there until you delete them.</li>
+        <li>Replay keeps a bounded rolling window of encoded screen/audio data in memory. Older buffered content is released as the window advances. Recording and recovery can use temporary files in private app storage before a saved video is finalized.</li>
         <li>Settings, trial/entitlement status, and local diagnostics remain in the App’s private storage until they are replaced, cleared through Android settings, or removed by uninstalling the App. Diagnostic storage is bounded, so older events may be overwritten.</li>
-        <li>The developer does not operate a cloud backup service for App data. Copies you export or share are controlled by you and the destination you choose.</li>
+        <li>The App excludes its private data from Android cloud backup and device transfer using its backup configuration. This does not delete recordings already saved in the shared media library or copies managed by other apps.</li>
+        <li>Clearing App data or uninstalling removes local settings and entitlement records; it does not cancel a Google Play purchase. A valid purchase can be restored using the same Google Play account. Google retains its own transaction and billing-service records under its policies; the developer cannot erase those records by clearing App data.</li>
+        <li>Google's billing library manages its diagnostic queues and transmission separately from the App's bounded local recording log. The developer does not operate a cloud backup service for App data. Copies you export or share are controlled by you and your selected destination.</li>
       </ul>
 
       <h3>5. Security</h3>
@@ -246,7 +251,7 @@
       <p>The App is a general-purpose utility and is not designed specifically for children. It does not knowingly collect personal information through a developer-operated service.</p>
 
       <h3>7. Third-party services</h3>
-      <p>The App relies on Android and may use Google Play services for distribution and purchases. Those services are governed by their providers’ privacy policies. Apps or services you select when sharing content are also independent third parties.</p>
+      <p>The App relies on Android and Google Play for distribution, purchases, restoration, and billing-service diagnostics. Those services are governed by their providers' privacy policies. Apps or services you select when sharing content are also independent third parties.</p>
 
       <h3>8. Changes to this policy</h3>
       <p>This policy may be updated when App features, legal requirements, or data practices change. The current version will be published at this URL with a revised effective date.</p>
@@ -259,7 +264,7 @@
 
     <section id="chinese" lang="zh-CN" aria-labelledby="chinese-title">
       <h2 id="chinese-title">隐私权政策</h2>
-      <p class="muted">回录是一款以本地处理为主的屏幕录制工具。除非你主动分享，否则录制内容会保留在你的设备上。</p>
+      <p class="muted">回录在设备上处理录屏内容。Google Play 负责专业版购买、恢复以及支付服务诊断。本政策更新于 2026 年 10 月 14 日。</p>
 
       <h3>1. 适用范围</h3>
       <p>本隐私权政策说明由 yvhou 开发的 replay recoder（中文名“回录”，以下简称“本应用”）在你使用期间如何访问、使用、存储和分享信息。</p>
@@ -267,22 +272,27 @@
       <h3>2. 本应用访问的信息及用途</h3>
       <ul>
         <li><strong>屏幕内容：</strong>只有在你确认 Android 系统的屏幕捕获授权提示后，本应用才会访问屏幕内容，用于创建普通录屏和由你主动触发的回溯片段。</li>
-        <li><strong>音频：</strong>根据你选择的录制选项和设备支持情况，本应用可能访问设备播放音频和/或麦克风音频。使用麦克风需要获得 Android 权限，并且仅在启用麦克风选项时使用。</li>
+        <li><strong>音频：</strong>根据你的录制选项和设备支持情况，本应用可能在采集期间访问播放音频、麦克风音频或两者。需要时请求 Android 音频权限；仅在麦克风或混音模式下采集麦克风音频。</li>
         <li><strong>通知和悬浮控制：</strong>Android 要求录制期间显示前台服务通知。如果你启用悬浮控制，本应用会使用“显示在其他应用上层”权限来显示录制控制栏。</li>
         <li><strong>应用设置和使用资格状态：</strong>语言、录制偏好、试用状态和专业版权益状态保存在本地，以便记住你的选择并启用正确功能。</li>
-        <li><strong>有限的诊断信息：</strong>本应用可能在本地保存有数量上限的技术事件，例如设备和运行环境信息、录制配置、时间戳和错误状态。诊断信息的设计不包含录制的屏幕、音频、媒体内容、用户输入或敏感文件路径。</li>
+        <li><strong>本地录屏诊断：</strong>本应用在本地保存有数量上限的技术事件，例如录制配置、温度/内存/存储状态、时间戳和错误。报告不包含录制的屏幕、音频、输入内容、付款资料或购买令牌；录屏代码不会自动上传这些报告。</li>
+        <li><strong>Google Play 购买信息：</strong>为解锁或恢复专业版，本应用处理 Google Play 返回的商品、购买状态、购买令牌和签名，并使用令牌向 Google Play 确认购买。本地持久保存专业版状态及来源；开发者没有运营购买核验服务器。</li>
       </ul>
 
       <h3>3. 收集、传输和分享</h3>
-      <p>本应用不会将录制内容或诊断日志上传到开发者运营的服务器。本应用不包含广告、分析或跨应用跟踪 SDK，也不要求注册开发者账户。</p>
-      <p>只有当你主动执行操作（例如分享录制内容，或导出诊断报告并选择接收位置）时，相关信息才会离开设备。你所选择的应用或服务会按照其自身隐私政策处理该副本。</p>
-      <p>如果你通过 Google Play 购买专业版，交易由 Google 按照其政策处理。本应用只会接收解锁专业版功能所需的购买和权益状态；开发者不会获得你的完整银行卡资料。</p>
+      <p>本应用不会将录制内容或本地录屏诊断上传到开发者运营的服务器，没有广告或跨应用跟踪功能、开发者运营的分析后台，也不要求注册本应用账户。</p>
+      <p>你可以通过设备相册管理或分享录制内容，也可以主动导出本地诊断报告，通过 Android 分享界面选择接收方。接收应用或服务按照其自身隐私政策处理副本。由你在其他服务中启用的相册云同步或备份，由这些服务控制，并非本应用自动上传。</p>
+      <p>打开或返回设置页、恢复购买、发起购买时，Google Play Billing 可以与 Google 通信，以获取价格、查询权益和确认购买；即使没有购买专业版，也可能发生这些通信。Google 按其条款直接收集付款资料，本应用不会获得完整卡号或其他付款凭据。</p>
+      <p>集成的 Google Play Billing 库还有独立的诊断记录和传输路径，可以向 Google 发送支付接口结果、连接/错误信息、支付客户端会话信息以及设备/应用/网络运行环境信息，用于运行和改进支付服务。它与回录的本地录屏诊断不同，不会上传录制内容。Google 按照 <a href="https://policies.google.com/privacy">Google 隐私权政策</a> 处理这些信息。</p>
 
       <h3>4. 存储、保留和删除</h3>
       <ul>
         <li>录制内容保存在设备的媒体库中，通常位于 <strong>Movies/ReplayRecorder</strong>，直到你将其删除。</li>
+        <li>回溯在内存中维护有上限的已编码屏幕/音频滚动窗口，较旧内容随窗口推进释放。录制和恢复流程在完成视频保存前可以使用应用私有存储中的临时文件。</li>
         <li>设置、试用/权益状态和本地诊断信息保存在应用私有存储中，直到被新内容替换、你通过 Android 设置清除应用数据，或卸载本应用。诊断存储有数量上限，因此较旧事件可能被覆盖。</li>
-        <li>开发者不为应用数据运营云备份服务。由你导出或分享的副本由你和所选择的接收位置控制。</li>
+        <li>本应用通过备份配置排除私有数据的 Android 云备份和设备迁移；这不会删除已保存在共享媒体库中的视频，也不控制其他应用管理的副本。</li>
+        <li>清除应用数据或卸载会删除本地设置和权益记录，但不撤销 Google Play 购买；有效购买可用同一 Google Play 账号恢复。Google 按其政策保留交易和支付服务记录，开发者不能通过清除应用数据删除 Google 的记录。</li>
+        <li>Google 支付库独立管理其诊断队列和传输，不能将它们等同于回录有数量上限的本地诊断日志。开发者不运营应用数据云备份服务；由你导出或分享的副本由你及所选择的接收方控制。</li>
       </ul>
 
       <h3>5. 安全措施</h3>
@@ -292,7 +302,7 @@
       <p>本应用是通用工具，并非专为儿童设计。本应用不会通过开发者运营的服务有意收集儿童的个人信息。</p>
 
       <h3>7. 第三方服务</h3>
-      <p>本应用依赖 Android，并可能使用 Google Play 服务进行分发和处理购买。这些服务受其提供商的隐私政策约束。你在分享内容时选择的应用或服务也属于独立第三方。</p>
+      <p>本应用依赖 Android，并使用 Google Play 进行分发、购买、恢复及支付服务诊断。这些服务受其提供商的隐私政策约束。你在分享内容时选择的应用或服务也属于独立第三方。</p>
 
       <h3>8. 政策变更</h3>
       <p>当应用功能、法律要求或数据处理方式发生变化时，本政策可能会更新。最新版本会发布在本网址，并注明新的生效日期。</p>
