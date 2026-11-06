@@ -199,17 +199,17 @@
   <main>
     <p class="eyebrow">Privacy &amp; data</p>
     <h1>Privacy Policy</h1>
-    <p class="intro">replay recoder processes screen recordings on your device. It uses Google Play for age-access checks, Pro purchases, restoration, and billing-service diagnostics.</p>
+    <p class="intro">replay recoder processes screen recordings on your device. It uses Google Play Billing for Pro purchases, restoration, and billing-service diagnostics. It does not request Age Signals information.</p>
 
     <dl class="meta">
       <div><dt>App</dt><dd>replay recoder (回录)</dd></div>
       <div><dt>Developer</dt><dd>yvhou</dd></div>
-      <div><dt>Last updated</dt><dd>November 3, 2026</dd></div>
+      <div><dt>Last updated</dt><dd>November 6, 2026</dd></div>
     </dl>
 
     <aside class="notice" aria-label="Privacy summary">
       <strong>Privacy at a glance</strong>
-      <p>No app-account registration, advertising, or developer-operated recording-upload service. Screen and audio processing stays on your device. The App requests age-access information from Google Play; Google Play Billing can communicate with Google when access permits.</p>
+      <p>No app-account registration, advertising, or developer-operated recording-upload service. Screen and audio processing stays on your device. The App does not request age ranges or Age Signals approval status. After the current privacy disclosure is accepted, Google Play Billing can communicate with Google for prices, ownership and purchases.</p>
     </aside>
 
     <section id="english" aria-labelledby="english-title">
@@ -223,7 +223,7 @@
         <li><strong>Screen content:</strong> The App accesses the screen only after you approve Android’s system screen-capture prompt. This access is used to create standard recordings and user-requested replay clips.</li>
         <li><strong>Audio:</strong> Depending on your recording options and device support, the App may access playback audio, microphone audio, or both while capturing. Android audio permission is requested when needed; microphone audio is captured only in microphone or mixed-audio mode.</li>
         <li><strong>Notifications and overlay controls:</strong> Android requires a foreground-service notification while recording. If you enable floating controls, the App uses the “display over other apps” permission to show recording controls.</li>
-        <li><strong>App settings and access status:</strong> Language, recording preferences, trial status, and Pro entitlement status are stored locally so the App can remember your choices and enable the correct features.</li>
+        <li><strong>App settings and access status:</strong> Language, recording preferences, welcome-guide completion status, trial status, and Pro entitlement status are stored locally so the App can remember your choices and enable the correct features.</li>
         <li><strong>Local recording diagnostics:</strong> The App keeps a bounded local log of technical events such as recording configuration, thermal/memory/storage status, timestamps, and errors. These reports do not include recorded screen content, audio, typed content, payment details, or purchase tokens. They are not automatically uploaded by the App's recording code.</li>
         <li><strong>Google Play purchase information:</strong> To unlock or restore Pro, the App handles the purchased product, purchase state, purchase token, and signature supplied by Google Play. Tokens are used to confirm purchases with Google Play. The App stores the resulting Pro status and its source locally; it does not maintain a developer-operated purchase-verification server.</li>
       </ul>
@@ -231,14 +231,14 @@
       <h3>3. Collection, transmission, and sharing</h3>
       <p>The App does not upload recordings or local recording diagnostics to a developer-operated server. It has no advertising or cross-app tracking functionality, no developer-operated analytics backend, and no app-account registration.</p>
       <p>You can manage and share recordings through your device's gallery. You can also explicitly export a local diagnostic report and choose its recipient through Android's sharing interface. The destination app or service handles its copy under its own privacy policy. Gallery/cloud synchronization or backups that you enable independently are controlled by those services, not by this App.</p>
-      <p>After the current age-access decision permits Billing, opening or returning to settings, restoring purchases, or starting a purchase can cause Google Play Billing to communicate with Google to retrieve prices, query ownership, and confirm purchases. When access is restricted or a new age check is in progress, the App closes its Billing connection and pauses new Billing operations. Billing communication can occur even if you do not buy Pro. Google collects payment information directly under its terms; the App does not receive your full card number or other payment credentials.</p>
+      <p>After the current privacy disclosure is accepted, opening or returning to settings, restoring purchases, or starting a purchase can cause Google Play Billing to communicate with Google to retrieve prices, query ownership, and confirm purchases. Billing is independent of any age API and can communicate even if you do not buy Pro. If Billing is unavailable, local recording and previously verified local entitlement remain available; only a successful verified ownership snapshot may change Pro status. Google collects payment information directly under its terms; the App does not receive your full card number or other payment credentials.</p>
       <p>The included Google Play Billing library also has its own diagnostic logging and transmission. It can send billing API results, connection/error information, billing-client session information, and technical device/app/network environment information to Google to operate and improve the billing service. This is separate from the App's local recording diagnostics and does not upload your recordings. Google's processing is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
       <h3>4. Storage, retention, and deletion</h3>
       <ul>
         <li>Recordings are saved to your device’s media library, normally under <strong>Movies/ReplayRecorder</strong>, and remain there until you delete them.</li>
         <li>Replay keeps a bounded rolling window of encoded screen/audio data in memory. Older buffered content is released as the window advances. Recording and recovery can use temporary files in private app storage before a saved video is finalized.</li>
-        <li>Settings, trial/entitlement status, and local diagnostics remain in the App’s private storage until they are replaced, cleared through Android settings, or removed by uninstalling the App. Diagnostic storage is bounded, so older events may be overwritten.</li>
+        <li>Settings, welcome-guide completion status, trial/entitlement status, and local diagnostics remain in the App’s private storage until they are replaced, cleared through Android settings, or removed by uninstalling the App. Diagnostic storage is bounded, so older events may be overwritten.</li>
         <li>The App excludes its private data from Android cloud backup and device transfer using its backup configuration. This does not delete recordings already saved in the shared media library or copies managed by other apps.</li>
         <li>Clearing App data or uninstalling removes local settings and entitlement records; it does not cancel a Google Play purchase. A valid purchase can be restored using the same Google Play account. Google retains its own transaction and billing-service records under its policies; the developer cannot erase those records by clearing App data.</li>
         <li>Google's billing library manages its diagnostic queues and transmission separately from the App's bounded local recording log. The developer does not operate a cloud backup service for App data. Copies you export or share are controlled by you and your selected destination.</li>
@@ -248,29 +248,27 @@
       <p>The App uses Android’s permission system, system screen-capture consent, app-private storage, and local processing to reduce unnecessary data exposure. No method of storage is completely secure, so you should protect access to your device and review recordings before sharing them.</p>
 
       <h3>6. Children</h3>
-      <p>The App is a general-purpose utility primarily intended for adults and is not designed specifically for children. If Google Play identifies a user as under 13, the App pauses new recordings and purchases pending additional privacy review. Supervised users aged 13–17 may use permitted features when the required approvals are satisfied. Parents can manage supervision and app approval through Google Play or Family Link. The developer does not operate a parental-account or identity-verification service; please do not email identity documents or a child's age information.</p>
+      <p>The App is a general-purpose screen recording utility and is not designed specifically for children. It does not ask users to provide a birth date, identity document, age range or parental account to the developer. Google Play applies its own account, installation and transaction rules and may require verification or purchase approval. Parents can manage supported supervision and approvals through Google Play or Family Link. Do not email identity documents or a child’s age information to the developer. This description does not transfer every applicable developer obligation to Google Play.</p>
 
       <h3>7. Third-party services</h3>
-      <p>The App relies on Android and Google Play for distribution, age sharing and verification, applicable approval handling, purchases, restoration, and billing-service diagnostics. Those services are governed by their providers' privacy policies. Apps or services you select when sharing content are also independent third parties.</p>
+      <p>The App relies on Android for device permissions and Google Play for supported distribution, purchases, restoration, and billing-service diagnostics. These services apply their own rules and privacy policies. Apps or services you select when sharing content are independent third parties.</p>
 
       <h3>8. Changes to this policy</h3>
       <p>This policy may be updated when App features, legal requirements, or data practices change. The current version will be published at this URL with a revised effective date.</p>
 
       <h3>9. Contact</h3>
       <p>For privacy questions or requests, contact the developer at <a href="mailto:yvqiu18@gmail.com">yvqiu18@gmail.com</a>.</p>
-      <h3 id="age-english">10. Age and approval information</h3>
-      <p>The app uses the Google Play Age Signals API to request age-range sharing status, an age range when available, the source category of that range, and applicable approval status for significant app changes. These signals are used only to provide age-appropriate access and comply with applicable requirements. We do not ask you to enter your date of birth or provide identity documents to the developer.</p>
-      <p>The app processes the necessary response transiently and keeps only a short-lived access decision while its process runs. It does not save age ranges, installation identifiers, or approval dates to app storage, diagnostic reports, feedback messages, or a developer server, and does not use these signals for analytics, advertising, or profiling. Google Play performs its own age-sharing and verification processes under its terms and privacy policies.</p>
-      <p>If required verification or approval is incomplete, or a necessary check cannot be completed, new recordings and purchases may be paused. Known users under 13 are paused pending additional privacy review. Users who choose not to share an age range in a voluntary-sharing flow are not automatically classified as adults. Existing videos and purchase records are not deleted because of an age-check result. The app&#x27;s own access checks do not prevent stopping or saving a recording already in progress; Android or Google Play may separately restrict app operation.</p>
-      <p>Google Play Billing is not initialized until the current access decision permits it. When that permission is withdrawn or a fresh check is in progress, the app closes its current Billing connection and pauses new Billing operations. Google retains its own payment and service records under its policies. The existing purchase and Billing-diagnostics disclosures still apply whenever Billing operates.</p>
-      <p>Parents can manage supervision and app approval through Google Play or Family Link. The developer does not operate a parental-account or identity-verification service. Questions about this app can be sent to the existing support address; please do not send identity documents or a child&#x27;s age information by email.</p>
+      <h3 id="age-english">10. Age information and upgrades</h3>
+      <p>Starting with rc9 (version 16), the App no longer includes or calls the Google Play Age Signals API. It does not request age ranges, age-sharing status, range sources, installation identifiers or significant-change approval signals. Recording and purchase flows do not depend on this API.</p>
+      <p>Upgrading removes only the previous version’s local pending-access flag. Cleanup is retried if it cannot be completed and does not block recording or erase recordings, settings, trial records or Pro entitlement. The removed app age module no longer enforces its previous access decisions. Android and Google Play can independently apply their supported permissions and account, installation or transaction rules.</p>
+      <p>Purchase verification, pending transactions, cancellations, restoration and Google Play Billing diagnostics continue as described above. The developer does not operate an age-verification or parental-account service.</p>
     </section>
 
     <hr class="language-divider">
 
     <section id="chinese" lang="zh-CN" aria-labelledby="chinese-title">
       <h2 id="chinese-title">隐私权政策</h2>
-      <p class="muted">回录在设备上处理录屏内容，并使用 Google Play 进行年龄访问检查、专业版购买、恢复以及支付服务诊断。本政策更新于 2026 年 11 月 3 日。</p>
+      <p class="muted">回录在设备上处理录屏内容，并使用 Google Play Billing 进行专业版购买、恢复以及支付服务诊断，不再请求 Age Signals 信息。本政策更新于 2026 年 11 月 6 日。</p>
 
       <h3>1. 适用范围</h3>
       <p>本隐私权政策说明由 yvhou 开发的 replay recoder（中文名“回录”，以下简称“本应用”）在你使用期间如何访问、使用、存储和分享信息。</p>
@@ -280,7 +278,7 @@
         <li><strong>屏幕内容：</strong>只有在你确认 Android 系统的屏幕捕获授权提示后，本应用才会访问屏幕内容，用于创建普通录屏和由你主动触发的回溯片段。</li>
         <li><strong>音频：</strong>根据你的录制选项和设备支持情况，本应用可能在采集期间访问播放音频、麦克风音频或两者。需要时请求 Android 音频权限；仅在麦克风或混音模式下采集麦克风音频。</li>
         <li><strong>通知和悬浮控制：</strong>Android 要求录制期间显示前台服务通知。如果你启用悬浮控制，本应用会使用“显示在其他应用上层”权限来显示录制控制栏。</li>
-        <li><strong>应用设置和使用资格状态：</strong>语言、录制偏好、试用状态和专业版权益状态保存在本地，以便记住你的选择并启用正确功能。</li>
+        <li><strong>应用设置和使用资格状态：</strong>语言、录制偏好、新手引导已读状态、试用状态和专业版权益状态保存在本地，以便记住你的选择并启用正确功能。</li>
         <li><strong>本地录屏诊断：</strong>本应用在本地保存有数量上限的技术事件，例如录制配置、温度/内存/存储状态、时间戳和错误。报告不包含录制的屏幕、音频、输入内容、付款资料或购买令牌；录屏代码不会自动上传这些报告。</li>
         <li><strong>Google Play 购买信息：</strong>为解锁或恢复专业版，本应用处理 Google Play 返回的商品、购买状态、购买令牌和签名，并使用令牌向 Google Play 确认购买。本地持久保存专业版状态及来源；开发者没有运营购买核验服务器。</li>
       </ul>
@@ -288,14 +286,14 @@
       <h3>3. 收集、传输和分享</h3>
       <p>本应用不会将录制内容或本地录屏诊断上传到开发者运营的服务器，没有广告或跨应用跟踪功能、开发者运营的分析后台，也不要求注册本应用账户。</p>
       <p>你可以通过设备相册管理或分享录制内容，也可以主动导出本地诊断报告，通过 Android 分享界面选择接收方。接收应用或服务按照其自身隐私政策处理副本。由你在其他服务中启用的相册云同步或备份，由这些服务控制，并非本应用自动上传。</p>
-      <p>当前年龄访问决策允许 Billing 后，打开或返回设置页、恢复购买、发起购买可能使 Google Play Billing 与 Google 通信，以获取价格、查询权益和确认购买。访问受限或正在进行新的年龄检查时，本应用关闭 Billing 连接并暂停新的 Billing 操作；即使没有购买专业版，也可能发生这些通信。Google 按其条款直接收集付款资料，本应用不会获得完整卡号或其他付款凭据。</p>
+      <p>接受当前隐私说明后，打开或返回设置页、恢复购买、发起购买可能使 Google Play Billing 与 Google 通信，以获取价格、查询权益和确认购买。Billing 独立于年龄接口，即使没有购买专业版，也可能发生这些通信。Billing 不可用不会阻止本地录屏，也不会因失败清除本地已验证权益；只有成功且已验证的商品权益查询结果才会更新专业版状态。Google 按其条款直接收集付款资料，本应用不会获得完整卡号或其他付款凭据。</p>
       <p>集成的 Google Play Billing 库还有独立的诊断记录和传输路径，可以向 Google 发送支付接口结果、连接/错误信息、支付客户端会话信息以及设备/应用/网络运行环境信息，用于运行和改进支付服务。它与回录的本地录屏诊断不同，不会上传录制内容。Google 按照 <a href="https://policies.google.com/privacy">Google 隐私权政策</a> 处理这些信息。</p>
 
       <h3>4. 存储、保留和删除</h3>
       <ul>
         <li>录制内容保存在设备的媒体库中，通常位于 <strong>Movies/ReplayRecorder</strong>，直到你将其删除。</li>
         <li>回溯在内存中维护有上限的已编码屏幕/音频滚动窗口，较旧内容随窗口推进释放。录制和恢复流程在完成视频保存前可以使用应用私有存储中的临时文件。</li>
-        <li>设置、试用/权益状态和本地诊断信息保存在应用私有存储中，直到被新内容替换、你通过 Android 设置清除应用数据，或卸载本应用。诊断存储有数量上限，因此较旧事件可能被覆盖。</li>
+        <li>设置、新手引导已读状态、试用/权益状态和本地诊断信息保存在应用私有存储中，直到被新内容替换、你通过 Android 设置清除应用数据，或卸载本应用。诊断存储有数量上限，因此较旧事件可能被覆盖。</li>
         <li>本应用通过备份配置排除私有数据的 Android 云备份和设备迁移；这不会删除已保存在共享媒体库中的视频，也不控制其他应用管理的副本。</li>
         <li>清除应用数据或卸载会删除本地设置和权益记录，但不撤销 Google Play 购买；有效购买可用同一 Google Play 账号恢复。Google 按其政策保留交易和支付服务记录，开发者不能通过清除应用数据删除 Google 的记录。</li>
         <li>Google 支付库独立管理其诊断队列和传输，不能将它们等同于回录有数量上限的本地诊断日志。开发者不运营应用数据云备份服务；由你导出或分享的副本由你及所选择的接收方控制。</li>
@@ -305,22 +303,20 @@
       <p>本应用使用 Android 权限系统、系统屏幕捕获授权、应用私有存储和本地处理，以减少不必要的数据暴露。任何存储方式都无法保证绝对安全，因此请保护好设备，并在分享前检查录制内容。</p>
 
       <h3>6. 儿童隐私</h3>
-      <p>本应用是主要面向成年人的通用工具，并非专为儿童设计。如 Google Play 识别用户未满 13 岁，本应用暂缓新录屏和购买，等待额外隐私核对。13–17 岁受监督用户在满足所需批准后可使用获准功能。家长可通过 Google Play 或 Family Link 管理监督与应用批准。开发者不运营家长账号或身份核验服务；请勿通过邮件发送身份证件或儿童年龄资料。</p>
+      <p>本应用是通用屏幕录制工具，并非专为儿童设计。开发者不要求用户提供生日、身份证件、年龄范围或家长账号。Google Play 按其规则处理账号、安装和交易，可能要求验证或购买批准；家长可通过 Google Play 或 Family Link 管理其支持的监督与批准。请勿通过邮件向开发者发送身份证件或儿童年龄资料。本说明不表示全部适用的开发者义务已转交 Google Play。</p>
 
       <h3>7. 第三方服务</h3>
-      <p>本应用依赖 Android，并使用 Google Play 进行分发、年龄分享和验证、适用批准处理、购买、恢复及支付服务诊断。这些服务受其提供商的隐私政策约束。你在分享内容时选择的应用或服务也属于独立第三方。</p>
+      <p>本应用依赖 Android 的设备权限，并使用 Google Play 进行其支持的分发、购买、恢复及支付服务诊断。这些服务按其规则和隐私政策运行。你在分享内容时选择的应用或服务也属于独立第三方。</p>
 
       <h3>8. 政策变更</h3>
       <p>当应用功能、法律要求或数据处理方式发生变化时，本政策可能会更新。最新版本会发布在本网址，并注明新的生效日期。</p>
 
       <h3>9. 联系方式</h3>
       <p>如有隐私相关问题或请求，请发送邮件至 <a href="mailto:yvqiu18@gmail.com">yvqiu18@gmail.com</a> 联系开发者。</p>
-      <h3 id="age-chinese">10. 年龄与批准信息</h3>
-      <p>本应用通过 Google Play Age Signals 接口请求年龄范围分享状态、可用时的年龄范围及来源类别、适用的应用重大变更批准状态，仅用于适龄访问和履行适用要求。开发者不会要求你填写生日或提交身份证件。</p>
-      <p>本应用临时处理必要响应，仅在应用进程运行期间保留短期访问决策。不把年龄范围、安装标识或批准日期保存到本地应用存储、诊断报告、反馈邮件或开发者服务器，也不用于统计、广告或用户画像。Google Play 按其条款与隐私政策独立处理分享、监督和验证流程。</p>
-      <p>如必要验证/批准尚未完成，或无法完成必要检查，新录屏和购买可能暂缓。已知13岁以下用户暂缓新操作，等待额外隐私核对。自愿分享流程中拒绝分享年龄范围的用户不会被自动视作成年人。年龄检查结果不会导致删除已有视频或购买记录；应用自己的检查不拦截正在录制内容的停止和保存，但 Android 或 Google Play 可能独立限制应用运行。</p>
-      <p>当前访问决策允许后，本应用才初始化 Google Play Billing。访问许可失效或正在进行新检查时，应用关闭当前 Billing 连接并暂停新的 Billing 操作。Google 按其政策保留自身的付款与服务记录；Billing 实际运行时，原有购买和支付诊断披露仍适用。</p>
-      <p>家长可在 Google Play 或 Family Link 管理监督与应用批准。开发者不运营家长账号或身份核验服务。应用问题可通过既有支持邮箱联系；无需通过邮件提交身份证件或儿童年龄资料。</p>
+      <h3 id="age-chinese">10. 年龄信息与版本升级</h3>
+      <p>自 rc9（版本代码 16）起，本应用不再包含或调用 Google Play Age Signals 接口，不请求年龄范围、年龄分享状态、来源类别、安装标识或重大变更批准信号。录屏和购买流程不依赖此接口。</p>
+      <p>升级仅清理旧版的本地访问待解决标记，清理失败会重试，不阻止录屏，不删除视频、设置、试用记录或专业版权益。被移除的应用年龄模块不再执行原有访问决策。Android 和 Google Play 仍可独立实施其支持的权限、账号、安装或交易规则。</p>
+      <p>购买验证、待处理交易、取消、恢复与 Google Play Billing 诊断仍按上文处理。开发者不运营年龄核验或家长账号服务。</p>
     </section>
   </main>
 
